@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>mybatis-plus（熬夜复习版）</title>
+      <link href="/2022/03/29/mybatisplus/"/>
+      <url>/2022/03/29/mybatisplus/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h6 id="1-创建表"><a href="#1-创建表" class="headerlink" title="1.创建表"></a>1.创建表</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE `mybatis_plus` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;</span><br><span class="line">use `mybatis_plus`;</span><br><span class="line">CREATE TABLE `user` (</span><br><span class="line">`id` bigint(20) NOT NULL COMMENT &#x27;主键ID&#x27;,#mybatisplus默认是雪花算法生成id,所以需要用bigint</span><br><span class="line">`name` varchar(30) DEFAULT NULL COMMENT &#x27;姓名&#x27;,</span><br><span class="line">`age` int(11) DEFAULT NULL COMMENT &#x27;年龄&#x27;,</span><br><span class="line">`email` varchar(50) DEFAULT NULL COMMENT &#x27;邮箱&#x27;,</span><br><span class="line">PRIMARY KEY (`id`)</span><br><span class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h6 id="2-插入数据"><a href="#2-插入数据" class="headerlink" title="2.插入数据"></a>2.插入数据</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO user (id, name, age, email) VALUES</span><br><span class="line">(1, &#x27;Jone&#x27;, 18, &#x27;test1@baomidou.com&#x27;),</span><br><span class="line">(2, &#x27;Jack&#x27;, 20, &#x27;test2@baomidou.com&#x27;),</span><br><span class="line">(3, &#x27;Tom&#x27;, 28, &#x27;test3@baomidou.com&#x27;),</span><br><span class="line">(4, &#x27;Sandy&#x27;, 21, &#x27;test4@baomidou.com&#x27;),</span><br><span class="line">(5, &#x27;Billie&#x27;, 24, &#x27;test5@baomidou.com&#x27;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mybatis-plus </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git必知必会（详细版）</title>
       <link href="/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit/"/>
       <url>/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit/</url>
