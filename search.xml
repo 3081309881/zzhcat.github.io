@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>git必知必会2（书接上文完结版）</title>
+      <link href="/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit2/"/>
+      <url>/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h6 id="切换分支："><a href="#切换分支：" class="headerlink" title="切换分支："></a>切换分支：</h6><p><img src="https://s1.ax1x.com/2022/03/19/qEGY6I.png"></p><h6 id="修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容"><a href="#修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容" class="headerlink" title="修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容"></a>修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容</h6><p><img src="https://s1.ax1x.com/2022/03/19/qEY8sI.md.png"></p><h6 id="idea版两个版本提交后的冲突解决，解决完自动提交"><a href="#idea版两个版本提交后的冲突解决，解决完自动提交" class="headerlink" title="idea版两个版本提交后的冲突解决，解决完自动提交"></a>idea版两个版本提交后的冲突解决，解决完自动提交</h6><p><img src="https://s1.ax1x.com/2022/03/19/qENLxH.md.png"></p><h6 id="idea集成github"><a href="#idea集成github" class="headerlink" title="idea集成github:"></a>idea集成github:</h6><p>settings-&gt;version Control -&gt;github—-&gt;登录</p><h6 id="分享项目发到github"><a href="#分享项目发到github" class="headerlink" title="分享项目发到github:"></a>分享项目发到github:</h6><p><img src="https://s1.ax1x.com/2022/03/19/qEaqud.md.png"></p><p>1.remote:别名，一般和库名一致<br>2.repository name:库名，一般和项目名保持一致<br>3.private:私有库</p><h6 id="idea中push的两种方式"><a href="#idea中push的两种方式" class="headerlink" title="idea中push的两种方式"></a>idea中push的两种方式</h6><p><img src="https://s1.ax1x.com/2022/03/19/qE0M7R.md.png"></p><p><img src="https://s1.ax1x.com/2022/03/19/qE0D4P.md.png"></p><h6 id="使用ssh免密登录push"><a href="#使用ssh免密登录push" class="headerlink" title="使用ssh免密登录push"></a>使用ssh免密登录push</h6><p><a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:zzhcat&#x2F;git-test.git</p><p><img src="https://s1.ax1x.com/2022/03/19/qE0jER.png"></p><p><img src="https://s1.ax1x.com/2022/03/19/qEBZ5t.png"></p><h6 id="直接在github上修改代码，此时比本地库更新了，需要pull下来"><a href="#直接在github上修改代码，此时比本地库更新了，需要pull下来" class="headerlink" title="直接在github上修改代码，此时比本地库更新了，需要pull下来"></a>直接在github上修改代码，此时比本地库更新了，需要pull下来</h6><p>注意：push是将本地库代码推送到远程库，如果本地库代码跟远程库代码不一致，push的操作会被拒绝，也就是说，要想push成功，一定要保证本地库的版本要比远程库版本高！<strong>因此一个成熟的程序员在动手修改本地代码之前，一定要先检查远程库跟本地库代码的区别！如果本地库代码版本已经落后，切记要先pull拉取一下远程哭，在将本地代码更新后，发送到远程库</strong>push之前，请你先pull一下，而且你拉取的时候一定要确保本地的代码不更改</p><h6 id="新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）"><a href="#新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）" class="headerlink" title="新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）"></a>新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）</h6><p>1.点击get from version control<br>2.选择git方式，选择ssh协议（http协议）</p><h6 id="小结1："><a href="#小结1：" class="headerlink" title="小结1："></a>小结1：</h6><p>git clone是克隆，git pull 是拉。<br>但是，也有区别：<br>从远程服务器克隆一个一模一样的版本库到本地,复制的是整个版本库，叫做clone.（clone是将一个库复制到你的本地，是一个本地从无到有的过程）<br>从远程服务器获取到一个branch分支的更新到本地，并更新本地库，叫做pull.（pull是指同步一个在你本地有版本的库内容更新的部分到你的本地库）<br>git pull相当于是从远程获取最新版本并merge（合并）到本地     git pull &#x3D; git fetch + git merge，git fetch更安全一些<br>git clone是远程操作的第一步，通常是从远程主机克隆一个版本库，eg:$ git clone ##   该命令会在本地主机生成一个目录，与远程主机的版本库同名，如果要是制定不同的目录名，可以将目录名作为git clone 命令的第二个参数。eg：$ git clone #版本库网址# #本地目录名#     git clone支持多种协议，除了http（s),还有ssh,git,本地协议。<br>git pull 作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。它的完整格式稍稍有点复杂。eg:$ git pull ##远程主机（origin） #远程分之(next)#：#本地分之(master)#<br>如果远程分支是与当前分支合并，则冒号后面的部分可以省略。eg:$ git pull #远程主机(origin)#　 #远程分之(next)#　相当于1. $ git fetch origin   2.$git merge origin&#x2F;next<br>在某些场合，git会自动在本地和远程分之之间，建立一种追踪关系。比如，在git clone 的时候，所有本地分之默认与远程主机的同名分之，建立追踪关系，也就是，本地的master分之自动“追踪”origin&#x2F;master分之。git 可以手动建立追踪， git branch –set-upstream master origin&#x2F;next   —&gt;指定master分之追踪到origin&#x2F;next。<br>如果当前分支只有一个追踪分支，连远程主机名都可以省略。$ git pull  表示当前分之自动与唯一一个追踪分之进行合并。</p><h6 id="小结2：工作之前要先git-init一下工作区间，在克隆代码，接着可以pull，修改，push"><a href="#小结2：工作之前要先git-init一下工作区间，在克隆代码，接着可以pull，修改，push" class="headerlink" title="小结2：工作之前要先git init一下工作区间，在克隆代码，接着可以pull，修改，push"></a>小结2：工作之前要先git init一下工作区间，在克隆代码，接着可以pull，修改，push</h6><h6 id="码云多处和github差不多，这里就不浪费时间记笔记了"><a href="#码云多处和github差不多，这里就不浪费时间记笔记了" class="headerlink" title="码云多处和github差不多，这里就不浪费时间记笔记了"></a>码云多处和github差不多，这里就不浪费时间记笔记了</h6>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git2完成版 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git必知必会（详细版）</title>
       <link href="/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit/"/>
       <url>/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit/</url>
@@ -46,31 +71,6 @@
         <tags>
             
             <tag> git1初始版 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>git必知必会2（书接上文完结版）</title>
-      <link href="/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit2/"/>
-      <url>/2022/03/17/%E4%B8%80%E5%A4%A9%E5%AD%A6%E4%BC%9Agit2/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h6 id="切换分支："><a href="#切换分支：" class="headerlink" title="切换分支："></a>切换分支：</h6><p><img src="https://s1.ax1x.com/2022/03/19/qEGY6I.png"></p><h6 id="修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容"><a href="#修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容" class="headerlink" title="修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容"></a>修改hot-fix分支后切换到master并且合并，此时头指针指向hot-fix分支的内容</h6><p><img src="https://s1.ax1x.com/2022/03/19/qEY8sI.md.png"></p><h6 id="idea版两个版本提交后的冲突解决，解决完自动提交"><a href="#idea版两个版本提交后的冲突解决，解决完自动提交" class="headerlink" title="idea版两个版本提交后的冲突解决，解决完自动提交"></a>idea版两个版本提交后的冲突解决，解决完自动提交</h6><p><img src="https://s1.ax1x.com/2022/03/19/qENLxH.md.png"></p><h6 id="idea集成github"><a href="#idea集成github" class="headerlink" title="idea集成github:"></a>idea集成github:</h6><p>settings-&gt;version Control -&gt;github—-&gt;登录</p><h6 id="分享项目发到github"><a href="#分享项目发到github" class="headerlink" title="分享项目发到github:"></a>分享项目发到github:</h6><p><img src="https://s1.ax1x.com/2022/03/19/qEaqud.md.png"></p><p>1.remote:别名，一般和库名一致<br>2.repository name:库名，一般和项目名保持一致<br>3.private:私有库</p><h6 id="idea中push的两种方式"><a href="#idea中push的两种方式" class="headerlink" title="idea中push的两种方式"></a>idea中push的两种方式</h6><p><img src="https://s1.ax1x.com/2022/03/19/qE0M7R.md.png"></p><p><img src="https://s1.ax1x.com/2022/03/19/qE0D4P.md.png"></p><h6 id="使用ssh免密登录push"><a href="#使用ssh免密登录push" class="headerlink" title="使用ssh免密登录push"></a>使用ssh免密登录push</h6><p><a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#109;</a>:zzhcat&#x2F;git-test.git</p><p><img src="https://s1.ax1x.com/2022/03/19/qE0jER.png"></p><p><img src="https://s1.ax1x.com/2022/03/19/qEBZ5t.png"></p><h6 id="直接在github上修改代码，此时比本地库更新了，需要pull下来"><a href="#直接在github上修改代码，此时比本地库更新了，需要pull下来" class="headerlink" title="直接在github上修改代码，此时比本地库更新了，需要pull下来"></a>直接在github上修改代码，此时比本地库更新了，需要pull下来</h6><p>注意：push是将本地库代码推送到远程库，如果本地库代码跟远程库代码不一致，push的操作会被拒绝，也就是说，要想push成功，一定要保证本地库的版本要比远程库版本高！<strong>因此一个成熟的程序员在动手修改本地代码之前，一定要先检查远程库跟本地库代码的区别！如果本地库代码版本已经落后，切记要先pull拉取一下远程哭，在将本地代码更新后，发送到远程库</strong>push之前，请你先pull一下，而且你拉取的时候一定要确保本地的代码不更改</p><h6 id="新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）"><a href="#新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）" class="headerlink" title="新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）"></a>新建项目git（重要，进公司要用），把代码克隆到本地（克隆别人的代码）</h6><p>1.点击get from version control<br>2.选择git方式，选择ssh协议（http协议）</p><h6 id="小结1："><a href="#小结1：" class="headerlink" title="小结1："></a>小结1：</h6><p>git clone是克隆，git pull 是拉。<br>但是，也有区别：<br>从远程服务器克隆一个一模一样的版本库到本地,复制的是整个版本库，叫做clone.（clone是将一个库复制到你的本地，是一个本地从无到有的过程）<br>从远程服务器获取到一个branch分支的更新到本地，并更新本地库，叫做pull.（pull是指同步一个在你本地有版本的库内容更新的部分到你的本地库）<br>git pull相当于是从远程获取最新版本并merge（合并）到本地     git pull &#x3D; git fetch + git merge，git fetch更安全一些<br>git clone是远程操作的第一步，通常是从远程主机克隆一个版本库，eg:$ git clone ##   该命令会在本地主机生成一个目录，与远程主机的版本库同名，如果要是制定不同的目录名，可以将目录名作为git clone 命令的第二个参数。eg：$ git clone #版本库网址# #本地目录名#     git clone支持多种协议，除了http（s),还有ssh,git,本地协议。<br>git pull 作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。它的完整格式稍稍有点复杂。eg:$ git pull ##远程主机（origin） #远程分之(next)#：#本地分之(master)#<br>如果远程分支是与当前分支合并，则冒号后面的部分可以省略。eg:$ git pull #远程主机(origin)#　 #远程分之(next)#　相当于1. $ git fetch origin   2.$git merge origin&#x2F;next<br>在某些场合，git会自动在本地和远程分之之间，建立一种追踪关系。比如，在git clone 的时候，所有本地分之默认与远程主机的同名分之，建立追踪关系，也就是，本地的master分之自动“追踪”origin&#x2F;master分之。git 可以手动建立追踪， git branch –set-upstream master origin&#x2F;next   —&gt;指定master分之追踪到origin&#x2F;next。<br>如果当前分支只有一个追踪分支，连远程主机名都可以省略。$ git pull  表示当前分之自动与唯一一个追踪分之进行合并。</p><h6 id="小结2：工作之前要先git-init一下工作区间，在克隆代码，接着可以pull，修改，push"><a href="#小结2：工作之前要先git-init一下工作区间，在克隆代码，接着可以pull，修改，push" class="headerlink" title="小结2：工作之前要先git init一下工作区间，在克隆代码，接着可以pull，修改，push"></a>小结2：工作之前要先git init一下工作区间，在克隆代码，接着可以pull，修改，push</h6><h6 id="码云多处和github差不多，这里就不浪费时间记笔记了"><a href="#码云多处和github差不多，这里就不浪费时间记笔记了" class="headerlink" title="码云多处和github差不多，这里就不浪费时间记笔记了"></a>码云多处和github差不多，这里就不浪费时间记笔记了</h6>]]></content>
-      
-      
-      <categories>
-          
-          <category> java学习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> git2完成版 </tag>
             
         </tags>
       
